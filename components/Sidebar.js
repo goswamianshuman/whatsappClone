@@ -9,7 +9,7 @@ import { useCollection } from "react-firebase-hooks/firestore";
 import Chat from "./Chat";
 import { useRouter } from "next/router";
 
-function Sidebar() {
+const Sidebar = () => {
   const [user] = useAuthState(auth);
   const userchatRef = db
     .collection("chats")
@@ -92,6 +92,6 @@ function Sidebar() {
       ))}
     </div>
   );
-}
+};
 
 export default Sidebar;
